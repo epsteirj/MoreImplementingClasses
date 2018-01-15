@@ -217,7 +217,7 @@ class Line(object):
           :type end:   Point
         """
         # --------------------------------------------------------------
-        # TODO: 3.
+        # Done: 3.
         #   a. READ the above specification, including the Example.
         #        ** ASK QUESTIONS AS NEEDED. **
         #        ** Be sure you understand it, ESPECIALLY the Example.
@@ -225,8 +225,8 @@ class Line(object):
         #        The tests are already written (below).
         #        They include the Example in the above doc-string.
         # --------------------------------------------------------------
-        self.start=start
-        self.end=end
+        self.start=start.clone()
+        self.end=end.clone()
 
     def __repr__(self):
         """
@@ -328,7 +328,7 @@ class Line(object):
           :rtype: Line
         """
         # --------------------------------------------------------------
-        # TODO: 4.
+        # Done: 4.
         #   a. READ the above specification, including the Example.
         #        ** ASK QUESTIONS AS NEEDED. **
         #        ** Be sure you understand it, ESPECIALLY the Example.
@@ -337,10 +337,8 @@ class Line(object):
         #        They include the Example in the above doc-string.
         # --------------------------------------------------------------
 
-        point1=Point(self.start)
-        point2=Point(self.end)
-        self.start=point1
-        self.end=point2
+        point1=self.start.clone()
+        point2=self.end.clone()
         return Line(point1,point2)
 
 
